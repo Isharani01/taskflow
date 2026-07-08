@@ -5,5 +5,10 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  background: #020617;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  color: inherit;
 }
