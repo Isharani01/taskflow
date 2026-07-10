@@ -1,8 +1,25 @@
+import styles from "./Dashboard.module.css";
+import DashboardNavbar from "../../components/Dashboard/DashboardNavbar/DashboardNavbar";
+import Sidebar from "../../components/Dashboard/Sidebar/Sidebar";
+import DashboardHeader from "../../components/Dashboard/DashboardHeader/DashboardHeader";
+
 function Dashboard() {
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <section className={styles.dashboard}>
+
+      <DashboardNavbar />
+
+      <div className={styles.dashboardLayout}>
+
+        <Sidebar />
+
+        <main className={styles.mainContent}>
+          <DashboardHeader />
+        </main>
+
+      </div>
+
+    </section>
   );
 }
 
