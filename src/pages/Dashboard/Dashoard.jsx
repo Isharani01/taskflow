@@ -3,6 +3,9 @@ import DashboardNavbar from "../../components/Dashboard/DashboardNavbar/Dashboar
 import Sidebar from "../../components/Dashboard/Sidebar/Sidebar";
 import DashboardHeader from "../../components/Dashboard/DashboardHeader/DashboardHeader";
 import StatCard from "../../components/Dashboard/StatCard/StatCard";
+import SearchBar from "../../components/Dashboard/SearchBar/SearchBar";
+import FilterBar from "../../components/Dashboard/FilterBar/FilterBar";
+import SortDropdown from "../../components/Dashboard/SortDropdown/SortDropdown";
 
 import { FaTasks } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
