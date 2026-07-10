@@ -1,0 +1,202 @@
+.register {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to right, #020617, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.register::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: #6366f1;
+  filter: blur(180px);
+  opacity: 0.30;
+  top: -120px;
+  left: -120px;
+  animation: glowOne 12s ease-in-out infinite;
+}
+
+.register::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #3b82f6;
+  filter: blur(200px);
+  opacity: 0.35;
+  bottom: -150px;
+  right: -150px;
+  animation: glowTwo 15s ease-in-out infinite;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.registerCard {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(17, 24, 39, 0.92);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 50px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #6366f1;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.registerCard h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.registerCard p {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputGroup label {
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 16px;
+  background: #1f2937;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.inputGroup input::placeholder {
+  color: #64748b;
+}
+
+.inputGroup input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.18);
+}
+
+.registerBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #6366f1;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registerBtn:hover {
+  background: #4f46e5;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(99, 102, 241, 0.35);
+}
+
+.loginLink {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.loginLink p {
+  color: #94a3b8;
+}
+
+.loginLink a {
+  color: #6366f1;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.loginLink a:hover {
+  text-decoration: underline;
+}
+
+@keyframes glowOne {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(80px, 60px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes glowTwo {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-80px, -60px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .registerCard {
+    padding: 35px 25px;
+  }
+
+  .registerCard h1 {
+    font-size: 2.2rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+}
