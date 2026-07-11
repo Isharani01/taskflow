@@ -1,12 +1,12 @@
 import styles from "./Modal.module.css";
 
-function Modal() {
+function Modal({ children }) {
   return (
     <div className={styles.overlay}>
 
       <div className={styles.modal}>
 
-        <h2>Add Task</h2>
+        {children}
 
       </div>
 

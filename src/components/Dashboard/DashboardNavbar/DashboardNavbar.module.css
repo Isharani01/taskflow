@@ -1,34 +1,92 @@
 .dashboardNavbar {
   height: 80px;
-  background: #0f172a;
-  border-bottom: 1px solid rgba(255,255,255,.08);
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 0 35px;
+
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.4rem;
+  gap: 12px;
+
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
+}
+
+.logo svg {
+  color: #6366f1;
+  font-size: 1.6rem;
 }
 
 .right {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
+}
+
+.notification {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #1e293b;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.notification:hover {
+  background: #6366f1;
+  transform: translateY(-2px);
+}
+
+.notification svg {
+  font-size: 1.1rem;
 }
 
 .profile {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #4f46e5;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profileIcon {
+  font-size: 2.6rem;
+  color: #6366f1;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo h4 {
+  font-size: .95rem;
+  color: white;
+  margin: 0;
+}
+
+.userInfo p {
+  font-size: .82rem;
+  color: #94a3b8;
+  margin: 3px 0 0;
 }

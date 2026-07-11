@@ -1,28 +1,66 @@
 import styles from "./TaskCard.module.css";
+import Button from "../Button/Button";
 
-function TaskCard() {
+import {
+  FaCalendarAlt,
+  FaCheckCircle,
+} from "react-icons/fa";
+
+function TaskCard({
+  title,
+  description,
+  dueDate,
+  priority,
+  status,
+}) {
   return (
     <div className={styles.taskCard}>
 
-      <div className={styles.left}>
+      <div className={styles.top}>
 
-        <h3>Design Dashboard</h3>
+        <h3>{title}</h3>
 
-        <p>Build responsive dashboard UI.</p>
-
-        <span>Due: 15 July 2026</span>
-
-        <span>High Priority</span>
+        <span className={styles.priority}>
+          {priority}
+        </span>
 
       </div>
 
-      <div className={styles.right}>
+      <p className={styles.description}>
+        {description}
+      </p>
 
-        <button>Pending</button>
+      <div className={styles.info}>
 
-        <button>Edit</button>
+        <div className={styles.date}>
 
-        <button>Delete</button>
+          <FaCalendarAlt />
+
+          <span>{dueDate}</span>
+
+        </div>
+
+        <div className={styles.status}>
+
+          <FaCheckCircle />
+
+          <span>{status}</span>
+
+        </div>
+
+      </div>
+
+      <div className={styles.actions}>
+
+        <Button
+          text="Edit"
+          className={styles.editBtn}
+        />
+
+        <Button
+          text="Delete"
+          className={styles.deleteBtn}
+        />
 
       </div>
 

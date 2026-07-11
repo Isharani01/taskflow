@@ -1,22 +1,33 @@
 import styles from "./DashboardHeader.module.css";
+import Button from "../Button/Button";
 
 function DashboardHeader() {
+  const today = new Date().toLocaleDateString("en-US", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+
   return (
     <div className={styles.header}>
 
-      <div>
+      <div className={styles.heading}>
 
-        <h1>Dashboard</h1>
+        <h1>Welcome Back, Isha 👋</h1>
 
         <p>
-          Manage your daily tasks efficiently.
+          Stay organized and manage your daily tasks efficiently.
         </p>
+
+        <span>{today}</span>
 
       </div>
 
-      <button className={styles.addBtn}>
-        + Add Task
-      </button>
+      <Button
+        text="+ Add Task"
+        className={styles.addBtn}
+      />
 
     </div>
   );

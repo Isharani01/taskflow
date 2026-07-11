@@ -1,19 +1,49 @@
 .filterBar {
   display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.filterBar select {
-  padding: 14px 18px;
-  background: #0f172a;
-  color: #f8fafc;
+.filterBar button {
+  padding: 11px 20px;
+
   border: 1px solid rgba(255,255,255,.08);
-  border-radius: 12px;
-  outline: none;
+
+  background: #0f172a;
+
+  color: #cbd5e1;
+
+  border-radius: 30px;
+
   cursor: pointer;
-  min-width: 170px;
-  transition: .3s;
+
+  font-size: .9rem;
+
+  transition: all .3s ease;
 }
 
-.filterBar select:focus {
+.filterBar button:hover {
+  background: #1e293b;
+  color: white;
   border-color: #6366f1;
+}
+
+.active {
+  background: #6366f1 !important;
+  color: white !important;
+  border-color: #6366f1 !important;
+}
+
+@media (max-width:768px){
+
+.filterBar{
+    width:100%;
+}
+
+.filterBar button{
+    flex:1;
+    min-width:110px;
+}
+
 }

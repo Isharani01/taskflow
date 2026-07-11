@@ -1,25 +1,85 @@
 .sidebar {
-  width: 250px;
+  width: 260px;
+  min-height: calc(100vh - 80px);
+
   background: #0f172a;
   border-right: 1px solid rgba(255,255,255,.08);
-  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 30px 18px;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .menu a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
   text-decoration: none;
+
   color: #cbd5e1;
+
   padding: 14px 18px;
+
   border-radius: 12px;
+
   transition: .3s;
+}
+
+.menu a svg {
+  font-size: 1rem;
 }
 
 .menu a:hover {
   background: #1e293b;
-  color: #fff;
+  color: white;
+}
+
+.active {
+  background: #6366f1;
+  color: white !important;
+}
+
+.logout {
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.logout button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ef4444;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.logout button:hover {
+  background: #dc2626;
+}
+
+.logout svg {
+  font-size: 1rem;
 }

@@ -4,7 +4,7 @@ function FilterBar() {
   return (
     <div className={styles.filterBar}>
 
-      <button>All</button>
+      <button className={styles.active}>All</button>
 
       <button>Completed</button>
 

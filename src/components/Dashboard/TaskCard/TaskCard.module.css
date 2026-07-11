@@ -1,78 +1,115 @@
 .taskCard {
   background: #0f172a;
-  border: 1px solid rgba(255,255,255,.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   padding: 24px;
-  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.3s ease;
 }
 
 .taskCard:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: #6366f1;
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.18);
 }
 
-.taskCard h3 {
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.top h3 {
+  flex: 1;
+  color: #ffffff;
   font-size: 1.2rem;
-  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
-.taskCard p {
+.priority {
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.description {
   color: #94a3b8;
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
 .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.priority {
-  padding: 6px 14px;
-  border-radius: 30px;
-  background: rgba(239,68,68,.15);
-  color: #ef4444;
-  font-size: .85rem;
-  font-weight: 600;
+.date,
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
 }
 
-.date {
-  color: #94a3b8;
-  font-size: .9rem;
+.date svg,
+.status svg {
+  color: #6366f1;
 }
 
 .actions {
   display: flex;
-  justify-content: space-between;
   gap: 12px;
+  margin-top: 8px;
 }
 
-.actions button {
+.editBtn,
+.deleteBtn {
   flex: 1;
-  padding: 11px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: .3s;
 }
 
 .editBtn {
-  background: #3b82f6;
-  color: white;
+  background: #6366f1;
+}
+
+.editBtn:hover {
+  background: #4f46e5;
 }
 
 .deleteBtn {
   background: #ef4444;
-  color: white;
 }
 
-.completeBtn {
-  background: #10b981;
-  color: white;
+.deleteBtn:hover {
+  background: #dc2626;
 }
 
-.actions button:hover {
-  opacity: .9;
+@media (max-width: 768px) {
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
 }

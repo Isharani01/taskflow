@@ -1,9 +1,9 @@
 .button {
-  padding: 14px 28px;
-  background: #6366f1;
-  color: #ffffff;
+  padding: 14px 26px;
   border: none;
   border-radius: 12px;
+  background: #6366f1;
+  color: #ffffff;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
@@ -13,7 +13,7 @@
 .button:hover {
   background: #4f46e5;
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 12px 25px rgba(99, 102, 241, 0.3);
 }
 
 .button:active {
@@ -21,6 +21,8 @@
 }
 
 .button:disabled {
-  opacity: 0.6;
+  opacity: .6;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }

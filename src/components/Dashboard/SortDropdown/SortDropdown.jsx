@@ -6,11 +6,25 @@ function SortDropdown() {
 
       <select>
 
-        <option>Recently Added</option>
+        <option value="recent">
+          Recently Added
+        </option>
 
-        <option>Due Date</option>
+        <option value="date">
+          Due Date
+        </option>
 
-        <option>Priority</option>
+        <option value="high">
+          High Priority
+        </option>
+
+        <option value="low">
+          Low Priority
+        </option>
+
+        <option value="completed">
+          Completed
+        </option>
 
       </select>
 

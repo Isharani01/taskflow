@@ -5,8 +5,8 @@
 }
 
 .taskForm h2 {
+  color: white;
   font-size: 1.8rem;
-  color: #f8fafc;
 }
 
 .inputGroup {
@@ -18,6 +18,7 @@
 .inputGroup label {
   color: #cbd5e1;
   font-size: .95rem;
+  font-weight: 500;
 }
 
 .inputGroup input,
@@ -25,57 +26,90 @@
 .inputGroup select {
   width: 100%;
   padding: 14px 16px;
-  background: #0f172a;
-  color: #f8fafc;
+
+  background: #020617;
+
+  color: white;
+
   border: 1px solid rgba(255,255,255,.08);
+
   border-radius: 12px;
+
   outline: none;
+
   transition: .3s;
+
+  font-size: .95rem;
+}
+
+.inputGroup textarea {
   resize: none;
 }
 
 .inputGroup input:focus,
 .inputGroup textarea:focus,
 .inputGroup select:focus {
+
   border-color: #6366f1;
+
+  box-shadow: 0 0 0 4px rgba(99,102,241,.12);
+
 }
 
 .row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2,1fr);
   gap: 20px;
 }
 
 .buttonGroup {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-}
 
-.cancelBtn,
-.saveBtn {
-  padding: 13px 24px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: .95rem;
-  transition: .3s;
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin-top: 10px;
+
 }
 
 .cancelBtn {
-  background: #334155;
-  color: white;
-}
 
-.saveBtn {
-  background: #6366f1;
-  color: white;
+  background: #334155;
+
 }
 
 .cancelBtn:hover {
+
   background: #475569;
+
+}
+
+.saveBtn {
+
+  background: #6366f1;
+
 }
 
 .saveBtn:hover {
+
   background: #4f46e5;
+
+}
+
+@media(max-width:768px){
+
+.row{
+
+grid-template-columns:1fr;
+
+}
+
+.buttonGroup{
+
+flex-direction:column;
+
+}
+
 }

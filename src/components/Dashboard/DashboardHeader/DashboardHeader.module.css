@@ -2,27 +2,45 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .heading h1 {
   font-size: 2rem;
-  margin-bottom: 6px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 .heading p {
   color: #94a3b8;
+  font-size: 1rem;
+}
+
+.heading span {
+  color: #64748b;
+  font-size: .9rem;
 }
 
 .addBtn {
-  padding: 14px 28px;
-  background: #4f46e5;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: .3s;
+  min-width: 160px;
 }
 
-.addBtn:hover {
-  background: #4338ca;
+@media (max-width:768px){
+
+.header{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.addBtn{
+    width:100%;
+}
+
 }

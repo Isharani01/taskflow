@@ -1,12 +1,15 @@
 import styles from "./TaskForm.module.css";
+import Button from "../Button/Button";
 
 function TaskForm() {
   return (
     <form className={styles.taskForm}>
+
       <h2>Add New Task</h2>
 
       <div className={styles.inputGroup}>
         <label>Task Title</label>
+
         <input
           type="text"
           placeholder="Enter task title"
@@ -14,14 +17,16 @@ function TaskForm() {
       </div>
 
       <div className={styles.inputGroup}>
-        <label>Task Description</label>
+        <label>Description</label>
+
         <textarea
+          rows="5"
           placeholder="Enter task description"
-          rows="4"
         ></textarea>
       </div>
 
       <div className={styles.row}>
+
         <div className={styles.inputGroup}>
           <label>Priority</label>
 
@@ -33,27 +38,36 @@ function TaskForm() {
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Due Date</label>
+          <label>Status</label>
 
-          <input type="date" />
+          <select>
+            <option>Pending</option>
+            <option>Completed</option>
+          </select>
         </div>
+
+      </div>
+
+      <div className={styles.inputGroup}>
+        <label>Due Date</label>
+
+        <input type="date" />
       </div>
 
       <div className={styles.buttonGroup}>
-        <button
-          type="button"
-          className={styles.cancelBtn}
-        >
-          Cancel
-        </button>
 
-        <button
-          type="submit"
+        <Button
+          text="Cancel"
+          className={styles.cancelBtn}
+        />
+
+        <Button
+          text="Save Task"
           className={styles.saveBtn}
-        >
-          Save Task
-        </button>
+        />
+
       </div>
+
     </form>
   );
 }
