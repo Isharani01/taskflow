@@ -11,7 +11,7 @@ import TaskList from "../../components/Dashboard/TaskList/TaskList";
 import Modal from "../../components/Dashboard/Modal/Modal";
 import TaskForm from "../../components/Dashboard/TaskForm/TaskForm";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import {
   FaTasks,
@@ -21,32 +21,40 @@ import {
 
 function Dashboard() {
 
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Design Dashboard",
-      description: "Create responsive dashboard UI.",
-      dueDate: "2026-07-15",
-      priority: "High",
-      status: "Pending",
-    },
-    {
-      id: 2,
-      title: "Complete Assignment",
-      description: "Finish React TaskFlow project.",
-      dueDate: "2026-07-18",
-      priority: "Medium",
-      status: "Completed",
-    },
-    {
-      id: 3,
-      title: "Push to GitHub",
-      description: "Upload latest code.",
-      dueDate: "2026-07-20",
-      priority: "Low",
-      status: "Pending",
-    },
-  ]);
+  const defaultTasks = [
+  {
+    id: 1,
+    title: "Design Dashboard",
+    description: "Create responsive dashboard UI.",
+    dueDate: "2026-07-15",
+    priority: "High",
+    status: "Pending",
+  },
+  {
+    id: 2,
+    title: "Complete Assignment",
+    description: "Finish React TaskFlow project.",
+    dueDate: "2026-07-18",
+    priority: "Medium",
+    status: "Completed",
+  },
+  {
+    id: 3,
+    title: "Push to GitHub",
+    description: "Upload latest code.",
+    dueDate: "2026-07-20",
+    priority: "Low",
+    status: "Pending",
+  },
+];
+
+const [tasks, setTasks] = useState(() => {
+  const savedTasks = localStorage.getItem("tasks");
+
+  return savedTasks
+    ? JSON.parse(savedTasks)
+    : defaultTasks;
+});
 
   const [showModal, setShowModal] = useState(false);
   const [editingTask, setEditingTask] = useState(null);
@@ -55,6 +63,12 @@ function Dashboard() {
   const [filter, setFilter] = useState("All");
   const [sortBy, setSortBy] = useState("Recent");
   const taskRef = useRef(null);
+  useEffect(() => {
+  localStorage.setItem(
+    "tasks",
+    JSON.stringify(tasks)
+  );
+}, [tasks]);
 
   const addTask = (newTask) => {
 

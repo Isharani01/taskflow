@@ -13,8 +13,6 @@ function Sidebar({ onMyTasks, onAddTask }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Future me localStorage use karo to ye line uncomment kar dena
-    // localStorage.removeItem("tasks");
 
     navigate("/");
   };
