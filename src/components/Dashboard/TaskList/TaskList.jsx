@@ -1,19 +1,27 @@
 import styles from "./TaskList.module.css";
 import TaskCard from "../TaskCard/TaskCard";
 
-function TaskList({tasks}) {
+function TaskList({
+  tasks,
+  onDelete,
+  onEdit,
+  onToggleStatus,
+}) {
   return (
     <div className={styles.taskList}>
-      {tasks.map((task) => (
-        <TaskCard
-          key={task.id}
-          title={task.title}
-          description={task.description}
-          dueDate={task.dueDate}
-          priority={task.priority}
-          status={task.status}
-        />
-      ))}
+      {tasks.length > 0 ? (
+        tasks.map((task) => (
+          <TaskCard
+            key={task.id}
+            task={task}
+            onDelete={onDelete}
+            onEdit={onEdit}
+            onToggleStatus={onToggleStatus}
+          />
+        ))
+      ) : (
+        <h3>No Tasks Found.</h3>
+      )}
     </div>
   );
 }

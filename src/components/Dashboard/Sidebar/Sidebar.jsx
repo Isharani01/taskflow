@@ -1,5 +1,5 @@
 import styles from "./Sidebar.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   FaThLarge,
@@ -9,43 +9,46 @@ import {
   FaSignOutAlt,
 } from "react-icons/fa";
 
-function Sidebar() {
+function Sidebar({ onMyTasks, onAddTask }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Future me localStorage use karo to ye line uncomment kar dena
+    // localStorage.removeItem("tasks");
+
+    navigate("/");
+  };
+
   return (
     <aside className={styles.sidebar}>
-
       <nav className={styles.menu}>
-
         <Link to="/dashboard" className={styles.active}>
           <FaThLarge />
           <span>Dashboard</span>
         </Link>
 
-        <Link to="/dashboard">
+        <button onClick={onMyTasks}>
           <FaTasks />
           <span>My Tasks</span>
-        </Link>
+        </button>
 
-        <Link to="/dashboard">
+        <button onClick={onAddTask}>
           <FaPlusCircle />
           <span>Add Task</span>
-        </Link>
+        </button>
 
         <Link to="/about">
           <FaInfoCircle />
           <span>About</span>
         </Link>
-
       </nav>
 
       <div className={styles.logout}>
-
-        <button>
+        <button onClick={handleLogout}>
           <FaSignOutAlt />
           <span>Logout</span>
         </button>
-
       </div>
-
     </aside>
   );
 }

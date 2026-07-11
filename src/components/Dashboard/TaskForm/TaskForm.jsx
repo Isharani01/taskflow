@@ -1,11 +1,48 @@
+import { useState } from "react";
 import styles from "./TaskForm.module.css";
 import Button from "../Button/Button";
 
-function TaskForm({ onClose }) {
-  return (
-    <form className={styles.taskForm}>
+function TaskForm({ onClose, onAddTask, editingTask }) {
+  const [title, setTitle] = useState(editingTask?.title || "");
+  const [description, setDescription] = useState(
+    editingTask?.description || ""
+  );
+  const [priority, setPriority] = useState(
+    editingTask?.priority || "Medium"
+  );
+  const [dueDate, setDueDate] = useState(
+    editingTask?.dueDate || ""
+  );
 
-      <h2>Add New Task</h2>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!title.trim()) {
+      alert("Please enter task title.");
+      return;
+    }
+
+    onAddTask({
+      title,
+      description,
+      priority,
+      dueDate,
+    });
+
+    setTitle("");
+    setDescription("");
+    setPriority("Medium");
+    setDueDate("");
+  };
+
+  return (
+    <form
+      className={styles.taskForm}
+      onSubmit={handleSubmit}
+    >
+      <h2>
+        {editingTask ? "Edit Task" : "Add New Task"}
+      </h2>
 
       <div className={styles.inputGroup}>
         <label>Task Title</label>
@@ -13,6 +50,8 @@ function TaskForm({ onClose }) {
         <input
           type="text"
           placeholder="Enter task title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         />
       </div>
 
@@ -22,15 +61,19 @@ function TaskForm({ onClose }) {
         <textarea
           rows="5"
           placeholder="Enter task description"
-        ></textarea>
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
       </div>
 
       <div className={styles.row}>
-
         <div className={styles.inputGroup}>
           <label>Priority</label>
 
-          <select>
+          <select
+            value={priority}
+            onChange={(e) => setPriority(e.target.value)}
+          >
             <option>High</option>
             <option>Medium</option>
             <option>Low</option>
@@ -38,24 +81,17 @@ function TaskForm({ onClose }) {
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Status</label>
+          <label>Due Date</label>
 
-          <select>
-            <option>Pending</option>
-            <option>Completed</option>
-          </select>
+          <input
+            type="date"
+            value={dueDate}
+            onChange={(e) => setDueDate(e.target.value)}
+          />
         </div>
-
-      </div>
-
-      <div className={styles.inputGroup}>
-        <label>Due Date</label>
-
-        <input type="date" />
       </div>
 
       <div className={styles.buttonGroup}>
-
         <Button
           text="Cancel"
           className={styles.cancelBtn}
@@ -63,12 +99,11 @@ function TaskForm({ onClose }) {
         />
 
         <Button
-          text="Save Task"
-          className={styles.saveBtn}
-        />
-
+  type="submit"
+  text={editingTask ? "Update Task" : "Save Task"}
+  className={styles.saveBtn}
+/>
       </div>
-
     </form>
   );
 }
