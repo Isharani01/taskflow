@@ -1,14 +1,32 @@
-.dashboard{
-    width:100%;
-    min-height:100vh;
-    background:#020617;
+.dashboard {
+  min-height: 100vh;
+  background: #020617;
+  color: #f8fafc;
 }
 
-.dashboardLayout{
-    display:flex;
+.dashboardLayout {
+  display: flex;
+  min-height: calc(100vh - 80px);
 }
 
-.mainContent{
-    flex:1;
-    padding:30px;
+.mainContent {
+  flex: 1;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow-y: auto;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
