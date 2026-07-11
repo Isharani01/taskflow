@@ -1,7 +1,7 @@
 import styles from "./DashboardHeader.module.css";
 import Button from "../Button/Button";
 
-function DashboardHeader() {
+function DashboardHeader({ onAddTask }) {
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long",
     day: "numeric",
@@ -27,6 +27,7 @@ function DashboardHeader() {
       <Button
         text="+ Add Task"
         className={styles.addBtn}
+         onClick={onAddTask}
       />
 
     </div>
