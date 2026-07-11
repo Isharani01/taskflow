@@ -2,7 +2,7 @@ import {Routes,Route} from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import Dashboard from "./pages/Dashboard/Dashoard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import About from "./pages/About/About";
 import NotFound from "./pages/NotFound/NotFound";
 function App() {
