@@ -1,5 +1,7 @@
 import styles from "./Hero.module.css";
+import { useNavigate } from "react-router-dom";
 function Hero() {
+  const navigate = useNavigate();
   return (
     <section className={styles.hero}>
         {/* main container, split hero into two columns */}
@@ -19,12 +21,22 @@ function Hero() {
           </p>
           {/* call to action buttons for left section */}
           <div className={styles.buttons}>
-            <button className={styles.primaryBtn}>
-              Get Started
-            </button>
-            <button className={styles.secondaryBtn}>
-              Learn More
-            </button>
+            <button
+  className={styles.primaryBtn}
+  onClick={() => navigate("/register")}
+>
+  Get Started
+</button>
+            <button
+  className={styles.secondaryBtn}
+  onClick={() =>
+    document
+      .getElementById("features")
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+>
+  Learn More
+</button>
           </div>
           {/* buttons div ended */}
         </div>

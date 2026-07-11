@@ -8,8 +8,11 @@ import {
 } from "react-icons/fa";
 function Features(){
     return(
-        <section className={styles.features}>
-            {/*making container main div*/}
+       <section
+        className={styles.features}
+        id="features"
+        >
+           {/*making container main div*/}
             <div className={styles.container}>
                 {/*header section containing heading n paragraph*/}
                 <div className={styles.header}>
