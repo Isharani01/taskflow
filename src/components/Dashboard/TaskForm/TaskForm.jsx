@@ -1,7 +1,7 @@
 import styles from "./TaskForm.module.css";
 import Button from "../Button/Button";
 
-function TaskForm() {
+function TaskForm({ onClose }) {
   return (
     <form className={styles.taskForm}>
 
@@ -59,6 +59,7 @@ function TaskForm() {
         <Button
           text="Cancel"
           className={styles.cancelBtn}
+          onClick={onClose}
         />
 
         <Button

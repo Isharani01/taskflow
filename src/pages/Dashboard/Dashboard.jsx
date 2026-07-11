@@ -86,10 +86,12 @@ function Dashboard() {
 
       </div>
       <TaskList tasks={tasks} />
-      {
+     {
   showModal && (
-    <Modal>
-      <TaskForm />
+    <Modal onClose={() => setShowModal(false)}>
+
+      <TaskForm onClose={() => setShowModal(false)} />
+
     </Modal>
   )
 }
