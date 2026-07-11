@@ -6,6 +6,7 @@ import StatCard from "../../components/Dashboard/StatCard/StatCard";
 import SearchBar from "../../components/Dashboard/SearchBar/SearchBar";
 import FilterBar from "../../components/Dashboard/FilterBar/FilterBar";
 import SortDropdown from "../../components/Dashboard/SortDropdown/SortDropdown";
+import TaskList from "../../components/Dashboard/TaskList/TaskList";
 
 import { FaTasks } from "react-icons/fa";
 import { FaCheckCircle } from "react-icons/fa";
@@ -55,6 +56,7 @@ function Dashboard() {
         </main>
 
       </div>
+      <TaskList />
 
     </section>
   );
