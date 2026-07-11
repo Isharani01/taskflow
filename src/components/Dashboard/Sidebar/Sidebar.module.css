@@ -1,0 +1,25 @@
+.sidebar {
+  width: 250px;
+  background: #0f172a;
+  border-right: 1px solid rgba(255,255,255,.08);
+  padding: 30px 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #cbd5e1;
+  padding: 14px 18px;
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.menu a:hover {
+  background: #1e293b;
+  color: #fff;
+}
