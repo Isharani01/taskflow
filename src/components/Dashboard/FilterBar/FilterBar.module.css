@@ -1,0 +1,19 @@
+.filterBar {
+  display: flex;
+}
+
+.filterBar select {
+  padding: 14px 18px;
+  background: #0f172a;
+  color: #f8fafc;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  min-width: 170px;
+  transition: .3s;
+}
+
+.filterBar select:focus {
+  border-color: #6366f1;
+}
