@@ -1,17 +1,40 @@
-import styles from "./Modal.module.css";
-
-function Modal() {
-  return (
-    <div className={styles.overlay}>
-
-      <div className={styles.modal}>
-
-        <h2>Add Task</h2>
-
-      </div>
-
-    </div>
-  );
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
 }
 
-export default Modal;
+.modal {
+  width: 100%;
+  max-width: 650px;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: popup 0.3s ease;
+}
+
+.modal h2 {
+  color: #f8fafc;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
