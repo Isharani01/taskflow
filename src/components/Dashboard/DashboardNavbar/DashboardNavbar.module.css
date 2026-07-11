@@ -3,13 +3,10 @@
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 35px;
-
   position: sticky;
   top: 0;
   z-index: 999;
@@ -19,7 +16,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-
   font-size: 1.5rem;
   font-weight: 700;
   color: #ffffff;
@@ -39,17 +35,13 @@
 .notification {
   width: 45px;
   height: 45px;
-
-  border: none;
+  border:none;
   border-radius: 50%;
-
   background: #1e293b;
   color: white;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   cursor: pointer;
   transition: .3s;
 }

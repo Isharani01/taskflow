@@ -14,7 +14,7 @@ function DashboardHeader() {
 
       <div className={styles.heading}>
 
-        <h1>Welcome Back, Isha 👋</h1>
+        <h1>Welcome Back, Isha </h1>
 
         <p>
           Stay organized and manage your daily tasks efficiently.
