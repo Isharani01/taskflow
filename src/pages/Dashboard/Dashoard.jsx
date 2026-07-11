@@ -43,6 +43,15 @@ function Dashboard() {
     value="6"
   />
 </div>
+<div className={styles.controls}>
+
+  <SearchBar />
+
+  <FilterBar />
+
+  <SortDropdown />
+
+</div>
         </main>
 
       </div>
