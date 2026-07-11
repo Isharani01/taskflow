@@ -10,8 +10,8 @@ import SortDropdown from "../../components/Dashboard/SortDropdown/SortDropdown";
 import TaskList from "../../components/Dashboard/TaskList/TaskList";
 import Modal from "../../components/Dashboard/Modal/Modal";
 import TaskForm from "../../components/Dashboard/TaskForm/TaskForm";
-
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 import {
   FaTasks,
@@ -48,13 +48,10 @@ function Dashboard() {
   },
 ];
 
-const [tasks, setTasks] = useState(() => {
-  const savedTasks = localStorage.getItem("tasks");
-
-  return savedTasks
-    ? JSON.parse(savedTasks)
-    : defaultTasks;
-});
+const [tasks, setTasks] = useLocalStorage(
+  "tasks",
+  defaultTasks
+);
 
   const [showModal, setShowModal] = useState(false);
   const [editingTask, setEditingTask] = useState(null);
@@ -63,12 +60,6 @@ const [tasks, setTasks] = useState(() => {
   const [filter, setFilter] = useState("All");
   const [sortBy, setSortBy] = useState("Recent");
   const taskRef = useRef(null);
-  useEffect(() => {
-  localStorage.setItem(
-    "tasks",
-    JSON.stringify(tasks)
-  );
-}, [tasks]);
 
   const addTask = (newTask) => {
 
