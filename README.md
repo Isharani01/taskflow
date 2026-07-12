@@ -122,6 +122,7 @@ Tasks can be sorted by:
 ![About 2](./screenshots/about2.png)
 
 ## NotFound Page
+
 [NotFound 1](./screenshots/notfound1.png)
 [NotFound 2](./screenshots/notfound2.png)
 
@@ -278,8 +279,8 @@ Not deployed yet.
 
 **Isha Rani**
 
-BS Computer Science Student
-Frontend Developer
+BS Computer Science Student.
+Frontend Developer.
 
 # License
 
