@@ -20,7 +20,12 @@ function TaskList({
           />
         ))
       ) : (
-        <h3>No Tasks Found.</h3>
+        <div className={styles.emptyState}>
+          <h2>No Tasks Yet</h2>
+          <p>
+            Click <strong>Add Task</strong> to create your first task.
+          </p>
+        </div>
       )}
     </div>
   );

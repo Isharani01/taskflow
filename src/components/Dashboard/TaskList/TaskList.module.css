@@ -6,7 +6,25 @@
   margin-top: 30px;
   width: 100%;
 }
+.emptyState {
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
 
+  background: #0f172a;
+  border: 1px dashed #334155;
+  border-radius: 16px;
+}
+
+.emptyState h2 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.emptyState p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
 @media (max-width: 992px) {
   .taskList {
     grid-template-columns: repeat(2, 1fr);
