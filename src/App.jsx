@@ -8,7 +8,10 @@ import NotFound from "./pages/NotFound/NotFound";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 function App() {
   return (
+        <>
+      <ScrollToTop />
     <Routes>
+
       <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/register" element={<Register/>}/>
@@ -16,6 +19,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="*" element={<NotFound/>}/>
     </Routes>
+    </>
   );
 }
 
