@@ -123,8 +123,8 @@ Tasks can be sorted by:
 
 ## NotFound Page
 
-[NotFound 1](./screenshots/notfound1.png)
-[NotFound 2](./screenshots/notfound2.png)
+![NotFound 1](./screenshots/notfound1.png)
+![NotFound 2](./screenshots/notfound2.png)
 
 # Technologies Used
 
