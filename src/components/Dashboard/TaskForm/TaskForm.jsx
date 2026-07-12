@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./TaskForm.module.css";
 import Button from "../Button/Button";
-
+import { priorities } from "../../../data/priorities";
 function TaskForm({ onClose, onAddTask, editingTask }) {
   const [title, setTitle] = useState(editingTask?.title || "");
   const [description, setDescription] = useState(
@@ -74,9 +74,14 @@ function TaskForm({ onClose, onAddTask, editingTask }) {
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
           >
-            <option>High</option>
-            <option>Medium</option>
-            <option>Low</option>
+            {priorities.map((item) => (
+  <option
+    key={item}
+    value={item}
+  >
+    {item}
+  </option>
+))}
           </select>
         </div>
 
