@@ -8,21 +8,25 @@ function Login() {
   return (
     <section className={styles.login}>
       <div className={styles.container}>
-        
-        <Link to="/" className={styles.homeBtn}>
-          <FaHome />
-          <span>Home</span>
-        </Link>
+<div className={styles.loginCard}>
 
-        <div className={styles.loginCard}>
-          <div className={styles.logo}>
-            <FaCheckCircle />
-            TaskFlow
-          </div>
+  <div className={styles.topBar}>
 
-          <h1>Welcome Back</h1>
+    <div className={styles.logo}>
+      <FaCheckCircle />
+      <span>TaskFlow</span>
+    </div>
 
-          <p>Sign in to continue managing your tasks.</p>
+    <Link to="/" className={styles.homeBtn}>
+      <FaHome />
+      <span>Back to Home</span>
+    </Link>
+
+  </div>
+
+  <h1>Welcome Back</h1>
+
+  <p>Sign in to continue managing your tasks.</p>
 
           <form
             className={styles.form}
@@ -33,6 +37,7 @@ function Login() {
           >
             <div className={styles.inputGroup}>
               <label>Email Address</label>
+
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -41,6 +46,7 @@ function Login() {
 
             <div className={styles.inputGroup}>
               <label>Password</label>
+
               <input
                 type="password"
                 placeholder="Enter your password"
@@ -61,7 +67,9 @@ function Login() {
               <Link to="/register">Register</Link>
             </p>
           </div>
+
         </div>
+
       </div>
     </section>
   );

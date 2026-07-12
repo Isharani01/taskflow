@@ -1,34 +1,39 @@
 import styles from "./Register.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaCheckCircle, FaHome } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 
 function Register() {
   const navigate = useNavigate();
+
   return (
     <section className={styles.register}>
       <div className={styles.container}>
-        <Link to="/" className={styles.homeBtn}>
-         <FaHome />
-          <span>Home</span>
-         </Link>
+
         <div className={styles.registerCard}>
 
-          <div className={styles.logo}>
-            <FaCheckCircle />
-            TaskFlow
-          </div>
+          <div className={styles.topBar}>
+  <div className={styles.logo}>
+    <FaCheckCircle />
+    <span>TaskFlow</span>
+  </div>
+
+  <Link to="/" className={styles.homeBtn}>
+    <FaHome />
+    <span>Back to Home</span>
+  </Link>
+</div>
 
           <h1>Create Account</h1>
 
           <p>Create your account to start managing your tasks.</p>
 
           <form
-             className={styles.form}
-             onSubmit={(e) => {
-             e.preventDefault();
-             navigate("/dashboard");
-             }}>
+            className={styles.form}
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate("/dashboard");
+            }}
+          >
             <div className={styles.inputGroup}>
               <label>Full Name</label>
               <input
@@ -62,8 +67,9 @@ function Register() {
             </div>
 
             <button
-            type="submit"
-             className={styles.registerBtn}>
+              type="submit"
+              className={styles.registerBtn}
+            >
               Create Account
             </button>
 
