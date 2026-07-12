@@ -1,6 +1,6 @@
 import styles from "./Register.module.css";
 import { Link } from "react-router-dom";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
@@ -8,7 +8,10 @@ function Register() {
   return (
     <section className={styles.register}>
       <div className={styles.container}>
-
+        <Link to="/" className={styles.homeBtn}>
+         <FaHome />
+          <span>Home</span>
+         </Link>
         <div className={styles.registerCard}>
 
           <div className={styles.logo}>

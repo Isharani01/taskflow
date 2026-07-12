@@ -162,6 +162,33 @@
 .loginLink a:hover {
   text-decoration: underline;
 }
+.homeBtn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:25px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#6366f1;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    transition:.3s;
+}
+
+.homeBtn:hover{
+    background:#4f46e5;
+}
+
+.homeBtn svg{
+    font-size:1rem;
+}
 
 @keyframes glowOne {
   0% {
