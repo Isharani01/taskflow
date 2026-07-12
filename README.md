@@ -112,12 +112,18 @@ Tasks can be sorted by:
 ![Dashboard 6](./screenshots/dashboard6.png)
 
 ![Dashboard 7](./screenshots/dashboard7.png)
+![Dashboard 8](./screenshots/dashboard8.png)
+
 
 ## About Page
 
 ![About 1](./screenshots/about1.png)
 
 ![About 2](./screenshots/about2.png)
+
+## NotFound Page
+[NotFound 1](./screenshots/notfound1.png)
+[NotFound 2](./screenshots/notfound2.png)
 
 # Technologies Used
 
