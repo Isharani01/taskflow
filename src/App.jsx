@@ -5,6 +5,7 @@ import Register from "./pages/Register/Register";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import About from "./pages/About/About";
 import NotFound from "./pages/NotFound/NotFound";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 function App() {
   return (
     <Routes>
