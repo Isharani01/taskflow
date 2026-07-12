@@ -1,5 +1,6 @@
 import styles from "./TaskCard.module.css";
 import Button from "../Button/Button";
+import formatDate from "../../../utils/formatDate";
 
 import {
   FaCalendarAlt,
@@ -31,7 +32,7 @@ function TaskCard({
 
         <div className={styles.date}>
           <FaCalendarAlt />
-          <span>{task.dueDate}</span>
+         <span>{formatDate(task.dueDate)}</span>
         </div>
 
         <div
