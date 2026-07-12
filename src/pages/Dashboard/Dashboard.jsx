@@ -13,6 +13,7 @@ import TaskForm from "../../components/Dashboard/TaskForm/TaskForm";
 import { useMemo, useRef, useState } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
+
 import {
   FaTasks,
   FaCheckCircle,
@@ -20,33 +21,7 @@ import {
 } from "react-icons/fa";
 
 function Dashboard() {
-
-  const defaultTasks = [
-  {
-    id: 1,
-    title: "Design Dashboard",
-    description: "Create responsive dashboard UI.",
-    dueDate: "2026-07-15",
-    priority: "High",
-    status: "Pending",
-  },
-  {
-    id: 2,
-    title: "Complete Assignment",
-    description: "Finish React TaskFlow project.",
-    dueDate: "2026-07-18",
-    priority: "Medium",
-    status: "Completed",
-  },
-  {
-    id: 3,
-    title: "Push to GitHub",
-    description: "Upload latest code.",
-    dueDate: "2026-07-20",
-    priority: "Low",
-    status: "Pending",
-  },
-];
+const defaultTasks = []; 
 
 const [tasks, setTasks] = useLocalStorage(
   "tasks",
@@ -197,7 +172,7 @@ const [tasks, setTasks] = useLocalStorage(
 
   return (
 
-    <section className={styles.dashboard}>
+<section className={styles.dashboard}>
 
       <DashboardNavbar />
 
@@ -310,6 +285,7 @@ const [tasks, setTasks] = useLocalStorage(
       )}
 
     </section>
+    
 
   );
 }
