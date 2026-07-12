@@ -20,9 +20,8 @@ All task data is stored in browser LocalStorage, allowing users to keep their ta
 
 ## Authentication UI
 
-* Login Page (UI only)
-* Register Page (UI only)
-* No backend authentication required
+* Login Page 
+* Register Page 
 
 ## Dashboard
 
