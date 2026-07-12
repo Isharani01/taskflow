@@ -1,53 +1,20 @@
 import styles from "./FilterBar.module.css";
+import { filters } from "../../../data/filters";
 
 function FilterBar({ filter, setFilter }) {
   return (
-    <div className={styles.filterBar}>
-
+  <div className={styles.filterBar}>
+    {filters.map((item) => (
       <button
-        className={filter === "All" ? styles.active : ""}
-        onClick={() => setFilter("All")}
+        key={item}
+        className={filter === item ? styles.active : ""}
+        onClick={() => setFilter(item)}
       >
-        All
+        {item}
       </button>
-
-      <button
-        className={filter === "Completed" ? styles.active : ""}
-        onClick={() => setFilter("Completed")}
-      >
-        Completed
-      </button>
-
-      <button
-        className={filter === "Pending" ? styles.active : ""}
-        onClick={() => setFilter("Pending")}
-      >
-        Pending
-      </button>
-
-      <button
-        className={filter === "High" ? styles.active : ""}
-        onClick={() => setFilter("High")}
-      >
-        High
-      </button>
-
-      <button
-        className={filter === "Medium" ? styles.active : ""}
-        onClick={() => setFilter("Medium")}
-      >
-        Medium
-      </button>
-
-      <button
-        className={filter === "Low" ? styles.active : ""}
-        onClick={() => setFilter("Low")}
-      >
-        Low
-      </button>
-
-    </div>
-  );
+    ))}
+  </div>
+);
 }
 
 export default FilterBar;
